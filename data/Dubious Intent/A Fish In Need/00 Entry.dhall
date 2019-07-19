@@ -1,26 +1,23 @@
--- TODO Share characters between plot elements.
--- * Hayley Yewenbow
-
 let Dialogue = ./../../types/Dialogue.dhall
 
-let mission = λ(component : Text) → "Dubious Intent/A Fish In Need/${component}"
+let scribe = ./../../Characters/"Hayley Yewenbow.dhall"
 
 let element
     : Dialogue
     = { identifier =
-          mission "00 Entry"
+          "00 Entry"
       , location =
           "church of a seaside town"
       , activates =
-          [ mission "01 Church Agreement"
-          , mission "02 The Big Scary Fish"
-          , mission "03 The Drow"
-          , mission "04 Koa-Toa Sacrifices"
-          , mission "05 Koa-Toa Tribe of Glugblubloop"
-          , mission "06 The Summoned Creature"
+          [ (./"01 Church Agreement.dhall").identifer
+          , (./"02 The Big Scary Fish").identifier
+          , (./"03 The Drow").identifier
+          , (./"04 Koa-Toa Sacrifices").identifier
+          , (./"05 Koa-Toa Tribe of Glugblubloop").identifier
+          , (./"06 The Summoned Creature").identifier
           ]
       , character =
-          "Serafin Pavlenco"
+          (./../../Characters/"Serafin Pavlenco.dhall").identifier
       , dialogue =
           ''
           Adventurer, this town is suffering from the loss of many.  The
@@ -35,8 +32,8 @@ let element
           
           The church believes all endeavours should aim for peace and while we
           mourn our losses we cannot abide a violent end to this unfortunate
-          happening.  Please speak with my scribe, Hayley Yewenbow, to hear the
-          church's terms of payment for return of our friends.
+          happening.  Please speak with my scribe, ${scribe.identifier}, to
+          hear the church's terms of payment for return of our friends.
           ''
       }
 
