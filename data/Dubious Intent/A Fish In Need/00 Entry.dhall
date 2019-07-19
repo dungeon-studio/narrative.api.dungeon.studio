@@ -10,11 +10,11 @@ let element
           "church of a seaside town"
       , activates =
           [ (./"01 Church Agreement.dhall").identifer
-          , (./"02 The Big Scary Fish").identifier
-          , (./"03 The Drow").identifier
-          , (./"04 Koa-Toa Sacrifices").identifier
-          , (./"05 Koa-Toa Tribe of Glugblubloop").identifier
-          , (./"06 The Summoned Creature").identifier
+          , (./"02 The Big Scary Fish.dhall").identifier
+          , (./"03 The Drow.dhall").identifier
+          , (./"04 Koa-Toa Sacrifices.dhall").identifier
+          , (./"05 Koa-Toa Tribe of Glugblubloop.dhall").identifier
+          , (./"06 The Summoned Creature.dhall").identifier
           ]
       , character =
           (./../../Characters/"Serafin Pavlenco.dhall").identifier

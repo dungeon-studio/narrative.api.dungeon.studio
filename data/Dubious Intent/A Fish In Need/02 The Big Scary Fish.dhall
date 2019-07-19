@@ -16,17 +16,31 @@ let element
             , when =
                 "continuously"
             , every =
-                "6s"
+                Some "6s"
             , splay =
-                "2s"
+                Some "2s"
             , outcome =
                 "knocked overboard"
             }
-          , { identifier = "Swim Away", when = "hp <= 25%", outcome = "finish" }
+          , { identifier =
+                "Swim Away"
+            , when =
+                "hp <= 25%"
+            , every =
+                None Text
+            , splay =
+                None Text
+            , outcome =
+                "finish"
+            }
           , { identifier =
                 "Overboard"
             , when =
                 "Rock the Boat occurred X times"
+            , every =
+                None Text
+            , splay =
+                None Text
             , outcome =
                 "grapple and dive"
             }
@@ -39,8 +53,20 @@ let element
             , outcome =
                 "finish"
             }
-          , { identifier = "Slap Water with Oars", outcome = "finish" }
-          , { identifier = "Brace", outcome = "advantage on knocked overboard" }
+          , { identifier =
+                "Slap Water with Oars"
+            , aliases =
+                [] : List Text
+            , outcome =
+                "finish"
+            }
+          , { identifier =
+                "Brace"
+            , aliases =
+                [] : List Text
+            , outcome =
+                "advantage on knocked overboard"
+            }
           ]
       }
 
