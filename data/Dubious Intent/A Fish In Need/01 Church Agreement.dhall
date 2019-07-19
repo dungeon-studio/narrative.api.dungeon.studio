@@ -3,7 +3,7 @@
 
 let Dialogue = ./../../types/Dialogue.dhall
 
-let mission = (component : Text) → "Dubious Intent/A Fish In Need/${component}"
+let mission = λ(component : Text) → "Dubious Intent/A Fish In Need/${component}"
 
 let element
     : Dialogue
@@ -12,17 +12,14 @@ let element
       , location =
           "church of a seaside town"
       , activates =
-	  [ "Followers/Hayley Yewenbow"
-	  , "Followers/Retinue"
-          , "Props/Skiff"
-	  ]
+          [ "Followers/Hayley Yewenbow", "Followers/Retinue", "Props/Skiff" ]
       , character =
           "Hayley Yewenbow"
       , dialogue =
           ''
           As requisition for payment, the church has agreed to provide the
           services including but not limited to the following:
-
+          
           * The scribe services of one Hayley Yewenbow, Scrivner of the Blue
             Sash
           * Inspection, research, and identification of any requested items of

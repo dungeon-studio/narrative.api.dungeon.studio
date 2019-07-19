@@ -1,5 +1,5 @@
 let Dialogue
-    : Text
+    : Type
     = { name :
           Text
       , location :
