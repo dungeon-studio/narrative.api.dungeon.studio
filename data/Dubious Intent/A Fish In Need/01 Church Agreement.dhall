@@ -7,12 +7,18 @@ let mission = λ(component : Text) → "Dubious Intent/A Fish In Need/${componen
 
 let element
     : Dialogue
-    = { name =
+    = { identifier =
           mission "01 Church Agreement"
       , location =
           "church of a seaside town"
       , activates =
-          [ "Followers/Hayley Yewenbow", "Followers/Retinue", "Props/Skiff" ]
+          [ "Followers/Hayley Yewenbow"
+          , "Services/Identification"
+          , "Services/Inspection"
+          , "Services/Porter"
+          , "Services/Research"
+          , "Vehicles/Skiff"
+          ]
       , character =
           "Hayley Yewenbow"
       , dialogue =

@@ -7,7 +7,7 @@ let mission = λ(component : Text) → "Dubious Intent/A Fish In Need/${componen
 
 let element
     : Dialogue
-    = { name =
+    = { identifier =
           mission "00 Entry"
       , location =
           "church of a seaside town"

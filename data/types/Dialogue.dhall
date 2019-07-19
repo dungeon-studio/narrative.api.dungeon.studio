@@ -1,6 +1,6 @@
 let Dialogue
     : Type
-    = { name :
+    = { identifier :
           Text
       , location :
           Text
